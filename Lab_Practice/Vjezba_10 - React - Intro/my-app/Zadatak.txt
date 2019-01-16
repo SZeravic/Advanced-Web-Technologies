@@ -1,0 +1,5 @@
+Kad se klikne na bilo kojeg studenta da se u parrent komponenti pozove funkcija 
+
+studentClicked(id)
+
+I ima onClick da se nesto dogodi

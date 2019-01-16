@@ -1,0 +1,106 @@
+header {
+  grid-area: header;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  border: 2px solid black;
+  text-align: center;
+ }
+
+ nav {
+  display: grid;
+  grid-area: nav;
+  grid-template-rows: 2fr 1fr 1fr 1fr;
+  background: rgb(60, 120, 199);
+  border: 4px solid rgb(36, 36, 36);
+  justify-content: center;
+  text-align: center;
+
+}
+
+main {
+  grid-area: content;
+  background: rgb(84, 124, 235);
+  border: 4px solid rgb(36, 36, 36);
+  text-shadow: 0.5px 0.5px #000000;
+  text-align: center;
+  font-size: 125%;
+  padding: 4%;
+  margin: 1%;
+ }
+
+aside {
+  grid-area: side;
+  margin-right: 0.5rem;
+  background: rgb(66, 154, 160);
+  border: 4px solid rgb(36, 36, 36);
+  text-align: center;
+  padding: 5%;
+ }
+
+footer {
+  grid-area: footer;
+  background: rgb(94, 94, 223);  
+  border: 4px solid rgb(36, 36, 36);
+  text-decoration-color: rgb(231, 231, 95);
+  text-align: center;
+  margin: 1%;
+  padding: 5px;
+ }
+
+ .nav-block{
+   background: rgb(122, 195, 248);
+   grid-gap: 10px;
+   float: left;
+   width: 20%;
+   height: 30px;
+}
+
+.nav-container {
+  /* grid-template-areas: "b a b" "b c c""b c c"; */  
+  display: grid;
+  grid-template-areas: "nav header side" "nav content side" "footer footer footer";
+  grid-template-columns: 300px 1fr 400px;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
+  font-size: 125%;
+  height: 100vh;
+ }
+ 
+.nav-block:hover  {
+  background : rgb(228, 78, 78)
+ }
+
+.Post1{
+  background: rgb(103, 172, 103);
+  border: 4px solid rgb(36, 36, 36);
+}
+
+.Post2{
+  background: rgb(6, 120, 214);
+  border: 4px solid rgb(36, 36, 36);
+}
+
+.Post3{
+  background: rgb(89, 72, 235);
+  border: 4px solid rgb(36, 36, 36);
+}
+
+.Post4{
+  background: rgb(196, 29, 202);
+  border: 4px solid rgb(36, 36, 36);
+}
+
+.Post1:hover {
+  background-color: rgb(131, 107, 194);
+}
+
+.Post2:hover {
+  background-color: rgb(207, 114, 203);
+}
+
+.Post3:hover {
+  background-color: rgb(207, 114, 203);
+}
+
+.Post4:hover {
+  background-color: rgb(207, 114, 203);
+}

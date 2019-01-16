@@ -1,0 +1,18 @@
+Za DomaČi:
+
+Imamo napraviti 2 domaća rada:
+- Angular
+- React
+
+Do Zadnjeg tjedna nastave do Nadoknade
+
+Zadatak: Sami osmislit disajn, netreba imati backend vise manje samo na frontend,
+
+Rjec je o nekakvoj listi prozvoda koje citamo iz JSON file-a,
+Proizvodi se nalazu u nekoj kartici, a sve informacije se nalazu u toj kraticei.
+
+Ima dvije funkcionalnosti (Ocijeni i dodaj u favorite) koji treba napraviti da se u kratici updata informacije o ocijeni.
+Favoriti container koji se uvjek nalazi sastrane na stranici i u nju se stavljaju favoritne stvari.
+
+Search bar isto.
+Extended detailed posts kad se expanda ... etc

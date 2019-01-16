@@ -1,0 +1,19 @@
+<!-- Strukturalna Direktriva *ngIf - Ako je ovo zadovoljeno onda mi pokazi html
+!! - Znaci NOT Negative
+Osigravamo da se kod izvrsi po redosljedu kod asinkronih poziva
+Drugi nacin rjesavanja ovoga je pomocu ? -->
+<div class="card" *ngIf="!!student">
+  <div class="card-body">
+    <h5 class="card-title">{{ student.fullName }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ student.email }}</h6>
+    <!-- Async Pipe ( | ) -->
+    <p class="card-text">
+      Datum rođenja je: {{ student.birthdate | date: 'dd/MM/yyyy' }}.
+    </p>
+    <a href="#" class="card-link">Nazad</a>
+  </div>
+</div>
+
+<!-- U angluaru mozemo rutirati drugacije -->
+<!-- Ubaciti HTML block ako student ne postoji
+A to moramo provjeriti u slucaju da u URL zahtjevu napisemo student/4 koji nepostoji -->

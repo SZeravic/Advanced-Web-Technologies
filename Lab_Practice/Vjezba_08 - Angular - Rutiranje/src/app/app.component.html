@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="content">
+    <h2>{{ title }}</h2>
+    <div class="border border-bottom-0">
+      <div class="bg-secondary d-flex p-3 text-center text-light">
+        <div class="col-1">#</div>
+        <div class="col-5">Student</div>
+        <div class="col-3">Birthdate</div>
+        <div class="col-3">Faculty</div>
+      </div>
+      <div class="tbody">
+        <div
+          class="d-flex p-3 student-row text-center border-bottom student-row"
+          *ngFor="let student of students; let i = index"
+          [ngClass]="{ active: !!student.marked }"
+        >
+          <div class="col-1">{{ i + 1 }}</div>
+          <div class="col-5">{{ student.fullName }}</div>
+          <div class="col-3">{{ student.birthdate | date: 'dd.MM.yyyy' }}</div>
+          <div class="col-3">{{ student.faculty }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
