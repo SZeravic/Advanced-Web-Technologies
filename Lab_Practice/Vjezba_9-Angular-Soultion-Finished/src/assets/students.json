@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "fullName": "Mate Matić",
+    "birthdate": "1995-10-02T23:00:00.000Z",
+    "email": "mmatic@fesb.hr",
+    "address": "Vukovarska 32",
+    "phone": "091 111 2222",
+    "faculty": "FESB"
+  },
+  {
+    "id": 2,
+    "fullName": "Ivo Ivić",
+    "birthdate": "1997-05-01T22:00:00.000Z",
+    "email": "iivic@fer.hr",
+    "address": "Poljička 12",
+    "phone": "091 222 3333",
+    "faculty": "FER",
+    "marked": true
+  },
+  {
+    "id": 3,
+    "fullName": "Ana Anić",
+    "birthdate": "1999-07-20T22:00:00.000Z",
+    "email": "aanic@fesb.hr",
+    "address": "R. Boškovića 2",
+    "phone": "091 333 4444",
+    "faculty": "FESB"
+  }
+]
