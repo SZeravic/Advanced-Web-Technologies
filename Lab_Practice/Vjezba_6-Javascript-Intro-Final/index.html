@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta
+      name="generator"
+      content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39"
+    />
+    <!--
+      section header nav hgroup section mark progress video input-date time footer
+    -->
+    <meta charset="UTF-8" />
+    <title>Napredne Web Tehnologije</title>
+    <link rel="stylesheet" type="text/css" href="css/stil.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <a href="#" id="logo">
+          <img src="images/logo.png" width="221" height="100" alt="logo" />
+        </a>
+      </header>
+      <div id="intro">
+        <section>
+          <h4>Zadatak 1</h4>
+          Unutar ove stranice definiran je niz objekata <b>studenti</b>. Svaki
+          student ima definirano ime, prezime, godište, ustanovu, grad rođenja i
+          spol. <br />
+          Korištenjem filter metode, izvucite sve studente koji studiraju na
+          FESBu. Potom ih ispišite u polje ispod (imenom i prezimenom, odvojeno
+          zarezom). <br />Preporuka koristiti forEach i template literals:
+          <br /><br />
+          Studenti koji studiraju na FESBu: <br />
+          <textarea
+            readonly
+            style="resize:none;"
+            rows="1"
+            cols="115"
+            id="zad1rezultat"
+          ></textarea>
+          <br />
+          Vaš kod:
+          <div class="codeBox">
+            <textarea readonly rows="5" cols="115" id="ta_zadatak1"></textarea>
+          </div>
+        </section>
+
+        <section>
+          <h4>Zadatak 2</h4>
+          Korištenjem map metode, svim studentima dodati svojstvo nacionalnost i
+          postaviti ga u vrijednost "Hrvat". <br />U polje ispod ispisat objekt
+          studenti u JSON formatu. <br />
+          <textarea
+            readonly
+            style="resize:none;"
+            rows="5"
+            cols="115"
+            id="zad2rezultat"
+          ></textarea>
+          <br />
+          <br />
+          Vaš kod:
+          <div class="codeBox">
+            <textarea readonly rows="5" cols="115" id="ta_zadatak2"></textarea>
+          </div>
+        </section>
+
+        <section>
+          <h4>Zadatak 3</h4>
+          Niz studenti sadrži informacije o sveukupno osam studenata. <br />
+          Za vas je već napisan kod koji bi trebao raditi sljedeće: <br />
+          klikom na prvi gumb (koji se nalazi ispod), trebao bi se pojaviti
+          alert s imenom prvog studenta u nizu, ... <br />
+          Nažalost, kod ne radi. Možete li ga popraviti?
+
+          <br /><br />
+          <input type="button" value="Student 1" id="z3b0" />
+          <input type="button" value="Student 2" id="z3b1" />
+          <input type="button" value="Student 3" id="z3b2" />
+          <input type="button" value="Student 4" id="z3b3" />
+          <input type="button" value="Student 5" id="z3b4" />
+          <input type="button" value="Student 6" id="z3b5" />
+          <input type="button" value="Student 7" id="z3b6" />
+          <input type="button" value="Student 8" id="z3b7" /> <br />
+          Vaš kod:
+          <div class="codeBox">
+            <textarea readonly rows="10" cols="115" id="ta_zadatak3"></textarea>
+          </div>
+        </section>
+
+        <section>
+          <h4>Zadatak 4</h4>
+          Dan je niz brojeva spremljen u varijablu "numbers". <br />
+          Pronađite max vrijednost niza, uz obavezno korištenje spread
+          operatora. <br />
+          Rezultat ispišite u polje ispod: <br />
+          <textarea
+            readonly
+            style="resize:none;"
+            rows="1"
+            cols="115"
+            id="zad4rezultat"
+          ></textarea>
+          <br />
+          Vaš kod:
+          <div class="codeBox">
+            <textarea readonly rows="10" cols="115" id="ta_zadatak4"></textarea>
+          </div>
+        </section>
+
+        <section>
+          <h4>Zadatak 5</h4>
+          Isprogramirajte simulaciju bacanja novčića. <br />Klikom na gumb
+          "Pokreni simulaciju" pokrećemo simulaciju koja se izvodi asinkrono
+          (koristiti Promise, bez async await). <br />Nakon 1 sekunde Promise
+          vraća slučajno odabranu boolean vrijednost (true ili false).
+          <br />Rezultat se potom ispisuje u polje ispod: <br /><br />
+          <input type="button" value="Pokreni simulaciju" id="z5b0" />
+          <br /><br />
+          <textarea
+            readonly
+            style="resize:none;"
+            rows="1"
+            cols="115"
+            id="zad5rezultat"
+          ></textarea>
+          <br />
+          Vaš kod:
+          <div class="codeBox">
+            <textarea
+              readonly
+              style="resize:none;"
+              rows="10"
+              cols="115"
+              id="ta_zadatak5"
+            ></textarea>
+          </div>
+        </section>
+
+        <section>
+          <h4>Zadatak 6</h4>
+          Riješite isti problem kao u prethodnom zadatku, ali sada koristite
+          "async" i "await" ključne riječi. <br /><br />
+          <input type="button" value="Pokreni simulaciju" id="z6b0" />
+          <br /><br />
+          <textarea
+            readonly
+            style="resize:none;"
+            rows="1"
+            cols="115"
+            id="zad6rezultat"
+          ></textarea>
+          <br />
+          Vaš kod:
+          <div class="codeBox">
+            <textarea
+              readonly
+              style="resize:none;"
+              rows="10"
+              cols="115"
+              id="ta_zadatak6"
+            ></textarea>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      /*Variables*/
+      let studenti = [
+        {
+          ime: 'Ivana',
+          prezime: 'Horvatinčić',
+          godiste: 2001,
+          ustanova: 'FESB',
+          gradRodenja: 'Split',
+          spol: 'ž'
+        },
+        {
+          ime: 'Viktor',
+          prezime: 'Jakšić',
+          godiste: 1999,
+          ustanova: 'FER',
+          gradRodenja: 'Mostar',
+          spol: 'm'
+        },
+        {
+          ime: 'Tihomil',
+          prezime: 'Ivanović',
+          godiste: 1997,
+          ustanova: 'FSB',
+          gradRodenja: 'Split',
+          spol: 'm'
+        },
+        {
+          ime: 'Elena',
+          prezime: 'Nikolić',
+          godiste: 1997,
+          ustanova: 'FESB',
+          gradRodenja: 'Zagreb',
+          spol: 'ž'
+        },
+        {
+          ime: 'Milena',
+          prezime: 'Kovačić',
+          godiste: 1999,
+          ustanova: 'FESB',
+          gradRodenja: 'Šibenik',
+          spol: 'ž'
+        },
+        {
+          ime: 'Jozo',
+          prezime: 'Posavec',
+          godiste: 2000,
+          ustanova: 'FESB',
+          gradRodenja: 'Koprivnica',
+          spol: 'm'
+        },
+        {
+          ime: 'Jasenka',
+          prezime: 'Cindrić',
+          godiste: 1998,
+          ustanova: 'FESB',
+          gradRodenja: 'Split',
+          spol: 'ž'
+        },
+        {
+          ime: 'Anamarija',
+          prezime: 'Vukelić',
+          godiste: 1996,
+          ustanova: 'FER',
+          gradRodenja: 'Split',
+          spol: 'ž'
+        }
+      ];
+    </script>
+
+    <script id="zadatak1"></script>
+
+    <script id="zadatak2"></script>
+
+    <script id="zadatak3">
+      for (var i = 0; i < studenti.length; i++) {
+        let id = 'z3b' + i;
+        document.getElementById(id).addEventListener('click', () => {
+          alert(studenti[i].ime);
+        });
+      }
+    </script>
+
+    <script id="zadatak4">
+      let numbers = [
+        123,
+        456,
+        6,
+        3,
+        345,
+        768,
+        343,
+        76,
+        234345,
+        857789,
+        342345,
+        56,
+        3,
+        2,
+        6,
+        8,
+        34234,
+        8347
+      ];
+    </script>
+
+    <script id="zadatak5"></script>
+
+    <script id="zadatak6"></script>
+
+    <script>
+      var zadatak1 = document.getElementById('zadatak1').innerHTML;
+      document.getElementById('ta_zadatak1').value = zadatak1
+        .trim()
+        .replace(/[\t\r]+/g, '');
+      var zadatak2 = document.getElementById('zadatak2').innerHTML;
+      document.getElementById('ta_zadatak2').value = zadatak2
+        .trim()
+        .replace(/[\t\r]+/g, '');
+      var zadatak3 = document.getElementById('zadatak3').innerHTML;
+      document.getElementById('ta_zadatak3').value = zadatak3
+        .trim()
+        .replace(/[\t\r]+/g, '');
+      var zadatak4 = document.getElementById('zadatak4').innerHTML;
+      document.getElementById('ta_zadatak4').value = zadatak4
+        .trim()
+        .replace(/[\t\r]+/g, '');
+      var zadatak5 = document.getElementById('zadatak5').innerHTML;
+      document.getElementById('ta_zadatak5').value = zadatak5
+        .trim()
+        .replace(/[\t\r]+/g, '');
+      var zadatak6 = document.getElementById('zadatak6').innerHTML;
+      document.getElementById('ta_zadatak6').value = zadatak6
+        .trim()
+        .replace(/[\t\r]+/g, '');
+    </script>
+  </body>
+</html>

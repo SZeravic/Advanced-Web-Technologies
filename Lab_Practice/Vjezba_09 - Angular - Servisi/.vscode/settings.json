@@ -1,6 +1,0 @@
-{
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "prettier.singleQuote": true,
-  "editor.formatOnSave": true,
-  "workbench.iconTheme": "material-icon-theme"
-}
