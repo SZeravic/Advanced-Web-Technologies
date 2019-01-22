@@ -1,0 +1,18 @@
+header {
+  height: 95%;
+  padding: 10px;
+  border-style: solid;
+  border-color: black;
+
+  /* text-align: center; */
+
+  background-color: rgb(111, 187, 153);
+}
+
+img {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
