@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { ProductInterface } from '../../models/Product.model';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
-import { Observable } from 'rxjs';
+import { ProductInterface } from '../../models/Product.model';
 
 @Component({
   selector: 'app-product-details',
@@ -10,8 +9,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  products: Observable<ProductInterface[]>;
-  product: Observable<ProductInterface>;
+  product: ProductInterface;
+  message: string;
   id: number;
 
   constructor(
@@ -19,32 +18,31 @@ export class ProductDetailsComponent implements OnInit {
     private router: ActivatedRoute,
     private productService: ProductService
     ) {
-      this.id = router.snapshot.params['id'];
+      this.message = '';
+    }
+
+    ngOnInit() {
+      this.router.params.subscribe(params => {
+        this.id = +params['id'];
+        this.productService.fetchProduct(this.id).subscribe(resp => {
+          this.product = resp;
+        });
+      });
+    }
+
+    onMessage(value: string) {
+      this.message = value;
+    }
+
+    onReturn() {
+      this.route.navigate([`/products`]);
+    }
+
+    createRange(no) {
+      const range = [];
+      for (let i = 0; i < no; i++) {
+        range.push(i);
+      }
+      return range;
+    }
   }
-
-  ngOnInit() {
-    this.productService.getJSON().subscribe(data => {
-         this.products = data;
-     });
-     console.log(this.products);
-  }
-
-  // ngOnInit() {
-  //   this.router.params.subscribe(params => { this.id = +params['id']; });
-  //   // console.log(this.router.params['id']);
-  //   this.productService.getJSON().subscribe(data => { this.products = data; });
-  // }
-
-
-  //  constructor(private router: Router, private route: ActivatedRoute) {
-  //   this.id = route.snapshot.params['id'];
-  // }
-
-  // returnToList(): void {
-  //   this.route.navigate([`/`]);
-  // }
-
-  // ngOnInit() {
-
-  // }
-}

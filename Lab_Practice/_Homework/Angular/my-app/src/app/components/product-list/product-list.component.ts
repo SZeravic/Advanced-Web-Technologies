@@ -1,7 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Observable, Subject  } from 'rxjs';
+import { map, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { ProductInterface } from '../../models/Product.model';
 import { ProductService } from 'src/app/services/product.service';
-import { Observable } from 'rxjs';
+
 
 
 @Component({
@@ -10,35 +12,57 @@ import { Observable } from 'rxjs';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit, OnDestroy {
+  allProducts: Observable<ProductInterface[]>;
   products: Observable<ProductInterface[]>;
-
-  // observer = {
-  //   next: function(data) {
-  //     this.allProducts = data;
-  //   },
-  //   error: function(error) {
-  //     console.log(error);
-  //   },
-  // };
+  subscription: any;
+  message: string;
+  typing = new Subject();
 
   constructor(private productService: ProductService) {
+    this.message = '';
   }
 
-  ngOnInit() {
-    this.productService.getJSON().subscribe(data => {
-         this.products = data;
-     });
-     console.log(this.products);
+  ngOnInit(): void {
+    this.allProducts = this.productService.fetchProducts();
+    this.products = this.allProducts;
+
+    console.log(this.products[0]);
+
+    // this.subscription = this.typing
+    // .pipe(
+    //   debounceTime(500),
+    //   distinctUntilChanged()
+    // )
+    // .subscribe((pojam: string) => {
+    //   const searched_value = pojam.toUpperCase();
+    //   if (pojam === '') {
+    //     this.products = this.allProducts;
+    //   } else {
+    //     this.products = this.allProducts.pipe(
+    //       map(items =>
+    //         items.filter(item =>
+    //           item.naziv
+    //           .toUpperCase()
+    //           .includes(searched_value) ||
+    //           item.opis
+    //           .toUpperCase()
+    //           .includes(searched_value)))
+    //     );
+    //   }
+    // });
   }
 
-  ngOnDestroy() {
+  onSearch(value: string) {
+    // this.typing.next(value);
+
 
   }
 
-  // ngOnInit() {
-  //   this.productService.fetchProducts().subscribe(data => {
-  //     this.products = data;
-  //   });
+  // onMessage(value: string) {
+  //   this.message = value;
   // }
 
+  ngOnDestroy() {
+    // this.subscription.unsubscribe();
+  }
 }

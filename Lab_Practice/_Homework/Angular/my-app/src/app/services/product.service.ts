@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { ProductInterface } from '../models/Product.model';
 
 @Injectable({
@@ -9,31 +10,17 @@ import { ProductInterface } from '../models/Product.model';
 export class ProductService {
   products: Observable<ProductInterface[]>;
 
-  // constructor(private http: HttpClient) {
-  //   // this.products = this.http.get<ProductInterface[]>('../../assets/products.json');
-  // }
-
   constructor(private http: HttpClient) {
-    // this.getJSON().subscribe(data => {
-    //     console.log(data);
-    // });
+    this.products = this.http.get<ProductInterface[]>('../../assets/products.json');
   }
-
-  getJSON(): Observable<any> {
-    return this.http.get('../../assets/products.json');
-  }
-
-  // fetchProducts(): Observable<ProductInterface[]> {
-  //   return this.http.get<ProductInterface[]>('/assets/students.json');
-  // }
 
   fetchProducts(): Observable<ProductInterface[]> {
-    console.log(this.products);
     return this.products;
   }
 
   fetchProduct(id: number): Observable<ProductInterface> {
-    return this.products[id];
+    return this.products.pipe(
+      map(products => products.find((prod) => prod.id === id))
+    );
   }
-
 }
