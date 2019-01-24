@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { AsideAddComponent } from './components/aside-add/aside-add.component';
+import { ProductStarsComponent } from './components/product-stars/product-stars.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     HeaderComponent,
     AsideComponent,
     ProductListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AsideAddComponent,
+    ProductStarsComponent
   ],
   imports: [
     BrowserModule,

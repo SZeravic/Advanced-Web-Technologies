@@ -13,6 +13,8 @@
   height: auto;
   box-shadow: 3px 4px 7px 1px #484848;
 
+  text-align: center;
+
   background-color: rgba(255, 255, 255, 0.945);
 }
 
@@ -26,10 +28,22 @@ li {
 }
 
 a {
-  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(19, 65, 172);
   text-decoration: none;
 }
 
 a:hover {
   color: #34a0ff;
+}
+
+img {
+  position: left;
+  float: absolute;
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  display: block;
+  margin: auto;
 }

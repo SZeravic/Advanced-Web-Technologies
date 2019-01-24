@@ -1,0 +1,14 @@
+i {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2em;
+  cursor: pointer;
+}
+i:hover {
+  color: red;
+}
+i.added {
+  color: red;
+}
+

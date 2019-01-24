@@ -1,67 +1,111 @@
 [
   {
     "id": 1,
-    "naziv": "Carbonia roller 115 x6",
-    "image_name": "carbonia.jpg",
-    "cijena": 1690,
-    "opis": "Carbonia 115 - choice for deep water spearfishing. Amazing speed, brutal penetration and accuracy will leave you amazed every time you will pull the trigger.",
-    "favorit": true,
+    "naziv": "Ray-Ban | Gold Green",
+    "image_name": "glasses_1.png",
+    "cijena": 153.99,
+    "opis": "Originally created for U.S. pilots in 1937, the Ray-Ban Classic Aviator is one of the world's most recognizable and best-loved styles. The traditional pilot shape gives exceptional lens performance and comfort. These gold frames with green lenses feature wire-thin temples.",
+    "favorit": false,
     "recenzije": [
       {
         "recenzija_id": 1,
-        "ocjena": 5,
-        "komentar": "Najbolja puška ikad",
-        "username": "mate"
+        "ocjena": 1,
+        "komentar": "HORRIBLE COATING!",
+        "username": "Larkspa"
       },
       {
         "recenzija_id": 2,
         "ocjena": 5,
-        "komentar": "Prezadovoljan...",
-        "username": "jure"
+        "komentar": "Love Aviator Glasses",
+        "username": "Bob"
       }
     ]
   },
   {
     "id": 2,
-    "naziv": "Bleutec Acid 105",
-    "image_name": "bluetec_acid.jpg",
-    "cijena": 700,
-    "opis": "Carbon-Fiber mono-block speargun from Bleutec. Includes 2x16 BleuTec Speed power bands and BleuTec Diamond spearshaft. Does not include reel.",
+    "naziv": "Giorgio Armani | Black",
+    "image_name": "glasses_2.png",
+    "cijena": 280.99,
+    "opis": "A trendsetter in Italian fashion, Giorgio Armani® remains an icon of elegance, refined style, and ageless design.",
     "favorit": false,
     "recenzije": [
       {
-        "recenzija_id": 3,
-        "ocjena": 4,
-        "komentar": "Domet je oko 3 metra, preciznost dobra.",
-        "username": "ante"
+        "recenzija_id": 1,
+        "ocjena": 3,
+        "komentar": "NICE GLASSES",
+        "username": "Dunes56"
       },
       {
-        "recenzija_id": 4,
+        "recenzija_id": 3,
         "ocjena": 5,
-        "komentar": "Odlična puška!",
-        "username": "jozo"
+        "komentar": "GREAT SUNGLASSES/IDEAL FIT",
+        "username": "PArine"
       }
     ]
   },
   {
     "id": 3,
-    "naziv": "C4 Graphite Carbotitanium Megaforce T 700",
-    "image_name": "megaforce.jpg",
-    "cijena": 610,
-    "opis": "Graphite is an elegant design speargun, an exclusive product fruit of years of study and researches. It is intended for people fond of technology at art level, people who can recognize technology at top level. The homogeneity and fluidity of movements under water makes the lining up of Graphite to a moving target very easy, quick and effective.",
+    "naziv": "Oakley | Green Purple",
+    "image_name": "glasses_3.png",
+    "cijena": 223.99,
+    "opis": "The Oakley pursuit of performance innovation is unrivaled. Its eyewear pushes the limit to create stylish gear that performs with purpose.",
     "favorit": false,
     "recenzije": [
       {
-        "recenzija_id": 4,
-        "ocjena": 4,
-        "komentar": "Vrlo lagana i praktična",
-        "username": "josip"
+        "recenzija_id": 1,
+        "ocjena": 5,
+        "komentar": "PRIZM IS A GAME CHANGER",
+        "username": "samleeii"
+      },
+      {
+        "recenzija_id": 3,
+        "ocjena": 1,
+        "komentar": "BUGGED MY EYES OUT",
+        "username": "annnnonymous"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "naziv": "Oakley | Black Purple",
+    "image_name": "glasses_4.png",
+    "cijena": 173.99,
+    "opis": "The Oakley pursuit of performance innovation is unrivaled. Its eyewear pushes the limit to create stylish gear that performs with purpose. The Flak 2.0 XL is engineered for sports with a larger, interchangeable lens to protect against wind, sun,and impact. These wrap sunglasses in black, have Prizm™ lenses to reduce glare. Thicker Unobtanium™ temples grip even when wet.",
+    "favorit": false,
+    "recenzije": [
+      {
+        "recenzija_id": 1,
+        "ocjena": 5,
+        "komentar": "BEST SUNGLASSES EVER!",
+        "username": "ChapelVP"
       },
       {
         "recenzija_id": 3,
         "ocjena": 5,
-        "komentar": "Đubreee",
-        "username": "zdravko mamic"
+        "komentar": "COMFORTABLE",
+        "username": "Dan12"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "naziv": "Brooks Brothers | Black Grey",
+    "image_name": "glasses_5.png",
+    "cijena": 95.99,
+    "opis": "With a history that spans two centuries, Brooks Brothers is one of America's most distinguished menswear brands. These men's designer eyeglasses in matte black bring sleek lines to the rectangular shape. Crafted from metal, these frames are flexible and strong, as well as hypoallergenic. Slim black horn temples feature the Brooks Brothers cursive signature stamp.",
+    "favorit": false,
+    "recenzije": [
+      {
+        "recenzija_id": 1,
+        "ocjena": 5,
+        "komentar": "PERFECT FIT",
+        "username": "Antonio18"
+      },
+      {
+        "recenzija_id": 3,
+        "ocjena": 5,
+        "komentar": "LOOK LIKE A HOLLYWOOD ACTOR",
+        "username": "ru1096"
       }
     ]
   }

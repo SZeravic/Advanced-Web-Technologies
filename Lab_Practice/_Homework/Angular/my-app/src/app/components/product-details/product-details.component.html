@@ -1,10 +1,8 @@
 
 <div class="content" *ngIf="product; else notfound">
     <div class="content-header">
-        <h2>
-            <i class="fas fa-arrow-left" (click)="onReturn()"></i> {{ product.naziv }}
-          </h2>
-          <h3>{{ product.cijena }} €</h3>
+
+          <h3>{{ product.naziv }} | {{ product.cijena }} €</h3>
     </div>
     <div class="main-content">
       <div class="img-wrapper">
@@ -15,7 +13,7 @@
     <hr>
 
     <div class="recenzije-container">
-      <h4>Recenzije</h4>
+      <h4>Reviews</h4>
       <div class="recenzija" *ngFor="let recenzija of product.recenzije">
         <div class="usr-image-wrapper">
           <img src="../../../assets/images/user.png" alt="{{ recenzija.username }}">
@@ -30,6 +28,7 @@
         </div>
       </div>
     </div>
+    <h2> <button style="margin: 5px" (click)="onReturn()"> Return </button></h2>
   </div>
 
-  <ng-template #notfound>Proizvod ne postoji.</ng-template>
+  <ng-template #notfound>Product does not exist</ng-template>

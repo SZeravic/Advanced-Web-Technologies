@@ -1,9 +1,11 @@
 <div id="search-div">
     <input type="text" #search placeholder="Search" (keyup)="onSearch(search.value)">
+    <button (click)="onClick()" style="margin: 10px"> Search </button>
   </div>
 
   <div class="products-wrapper">
-    <div class="product" *ngFor="let product of (products | async)">
+    <div class="product" *ngFor="let product of products">
+      <!-- <p>[{{ specificProduct.id }}]</p> -->
       <div class="content-header">
         <h4>
           <a
@@ -17,12 +19,16 @@
       <div class="content-main">
         <div class="image-wrapper">
           <img
-            src="../../../assets/images/{{ product.image_name }}"
-            alt="{{ product.naziv }}"
+          src="../../../assets/images/{{ product.image_name }}"
+          alt="{{ product.naziv }}"
           />
         </div>
-        <p class="opis">{{ product.opis }}</p>
+        <p style="font-weight: bold; padding: 1px;"> ABOUT THE FRAME </p>
+        <p class="description">{{ product.opis }}</p>
+        <div style="padding-bottom: 16px; font-weight: bold;"> </div>
       </div>
+      <app-product-stars [reviews]="product.recenzije"></app-product-stars>
+      <app-aside-add [product]="product"></app-aside-add>
     </div>
   </div>
 

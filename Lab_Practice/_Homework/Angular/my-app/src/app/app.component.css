@@ -36,10 +36,12 @@
 
 .content {
   padding: 10px;
-  border-style: solid;
-  border-color: black;
+  height: auto;
+  box-shadow: 3px 4px 7px 1px #484848;
 
-  background-color: yellow;
+  text-align: left;
+
+  background-color: rgba(213, 221, 216, 0.945);
 }
 
 footer {

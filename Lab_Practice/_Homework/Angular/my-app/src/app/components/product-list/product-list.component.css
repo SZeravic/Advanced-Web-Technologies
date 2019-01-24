@@ -18,6 +18,7 @@ input {
 }
 
 .product {
+  position: relative;
   padding: 20px;
   box-shadow: 3px 4px 7px 1px #484848;
   background-color: white;
@@ -54,11 +55,21 @@ a:hover {
 }
 
 img {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
   display: block;
   margin: auto;
+  float: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 450px;
+}
+
+app-product-stars {
+  float: left;
+}
+
+app-aside-add {
+  float: right;
+
 }
 
 @media screen and (min-width: 800px) {
