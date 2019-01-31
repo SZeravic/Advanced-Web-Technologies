@@ -169,80 +169,98 @@
       /*Variables*/
       let studenti = [
         {
-          ime: 'Ivana',
-          prezime: 'Horvatinčić',
+          ime: "Ivana",
+          prezime: "Horvatinčić",
           godiste: 2001,
-          ustanova: 'FESB',
-          gradRodenja: 'Split',
-          spol: 'ž'
+          ustanova: "FESB",
+          gradRodenja: "Split",
+          spol: "ž"
         },
         {
-          ime: 'Viktor',
-          prezime: 'Jakšić',
+          ime: "Viktor",
+          prezime: "Jakšić",
           godiste: 1999,
-          ustanova: 'FER',
-          gradRodenja: 'Mostar',
-          spol: 'm'
+          ustanova: "FER",
+          gradRodenja: "Mostar",
+          spol: "m"
         },
         {
-          ime: 'Tihomil',
-          prezime: 'Ivanović',
+          ime: "Tihomil",
+          prezime: "Ivanović",
           godiste: 1997,
-          ustanova: 'FSB',
-          gradRodenja: 'Split',
-          spol: 'm'
+          ustanova: "FSB",
+          gradRodenja: "Split",
+          spol: "m"
         },
         {
-          ime: 'Elena',
-          prezime: 'Nikolić',
+          ime: "Elena",
+          prezime: "Nikolić",
           godiste: 1997,
-          ustanova: 'FESB',
-          gradRodenja: 'Zagreb',
-          spol: 'ž'
+          ustanova: "FESB",
+          gradRodenja: "Zagreb",
+          spol: "ž"
         },
         {
-          ime: 'Milena',
-          prezime: 'Kovačić',
+          ime: "Milena",
+          prezime: "Kovačić",
           godiste: 1999,
-          ustanova: 'FESB',
-          gradRodenja: 'Šibenik',
-          spol: 'ž'
+          ustanova: "FESB",
+          gradRodenja: "Šibenik",
+          spol: "ž"
         },
         {
-          ime: 'Jozo',
-          prezime: 'Posavec',
+          ime: "Jozo",
+          prezime: "Posavec",
           godiste: 2000,
-          ustanova: 'FESB',
-          gradRodenja: 'Koprivnica',
-          spol: 'm'
+          ustanova: "FESB",
+          gradRodenja: "Koprivnica",
+          spol: "m"
         },
         {
-          ime: 'Jasenka',
-          prezime: 'Cindrić',
+          ime: "Jasenka",
+          prezime: "Cindrić",
           godiste: 1998,
-          ustanova: 'FESB',
-          gradRodenja: 'Split',
-          spol: 'ž'
+          ustanova: "FESB",
+          gradRodenja: "Split",
+          spol: "ž"
         },
         {
-          ime: 'Anamarija',
-          prezime: 'Vukelić',
+          ime: "Anamarija",
+          prezime: "Vukelić",
           godiste: 1996,
-          ustanova: 'FER',
-          gradRodenja: 'Split',
-          spol: 'ž'
+          ustanova: "FER",
+          gradRodenja: "Split",
+          spol: "ž"
         }
       ];
     </script>
 
-    <script id="zadatak1"></script>
+    <script id="zadatak1">
+    
+    var students = studenti.filter(student => student.ustanova === "FESB");
+    console.log(students);
 
-    <script id="zadatak2"></script>
+    let string = "";
+    students.forEach(student => string += `${student.ime} ${student.prezime}, `);
+    console.log(string);
+
+    document.getElementById("zad1rezultat").value = string;
+    
+    </script>
+
+    <script id="zadatak2">
+    
+    var students = studenti.map(student => { student.nacionalnost = "Hrvat"; return student});
+    // var students = studenti.map(student => { return { ...student, nacionalnost: "Hrvat" }});
+    console.log(students);
+
+    document.getElementById("zad2rezultat").value = JSON.stringify(students);
+    </script>
 
     <script id="zadatak3">
-      for (var i = 0; i < studenti.length; i++) {
-        let id = 'z3b' + i;
-        document.getElementById(id).addEventListener('click', () => {
+      for (let i = 0; i < studenti.length; i++) {
+        let id = "z3b" + i;
+        document.getElementById(id).addEventListener("click", () => {
           alert(studenti[i].ime);
         });
       }
@@ -268,38 +286,130 @@
         8,
         34234,
         8347
-      ];
+      ];      
+
+      var maxNumber = Math.max(...numbers);
+      document.getElementById("zad4rezultat").value = maxNumber;
+
+      let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let sum = [];
+
+      console.log("Map Practice");
+      sum = array.map(value => { if(value %2 == 0) return value * 10; else return value})
+      console.log(array);
+      console.log(sum);
+
     </script>
 
-    <script id="zadatak5"></script>
+    <script id="zadatak5">
+      console.log("Promise Practice");
 
-    <script id="zadatak6"></script>
+      function CoinFlip() {
+        function FlipChance() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(Math.floor(Math.random() * 2) == 0 ? "head" : "tails");
+          }, 1000);
+        });
+        }
+        var promise = FlipChance();
+
+        promise.then(data => {
+          document.getElementById("zad5rezultat").value = data;
+          console.log(data);
+        });
+
+      }      
+
+      document.getElementById("z5b0").addEventListener("click", () => CoinFlipv2());
+
+      function CoinFlipv2() {
+        function promTest() {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              resolve("Wooohooo!!!!!!");
+            }, 2000);
+          });
+        }
+        
+        var prom = promTest();
+
+        prom.then(value => console.log(value));
+        console.log(prom);
+        }
+
+      // function PromiseWin() {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       Math.floor(Math.random() * 6 + 1) == 6 ? resolve("Win") : reject("Loss");
+      //     }, 2000);
+      //   });
+      // }
+
+      // const PromiseLose = () =>
+      //   new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve("4 seconds have passed - Lost = (");
+      //     }, 4000);
+      //   });
+
+      // PromiseWin()
+      //   .then(data => console.log(data))
+      //   .catch(error => console.log(error + ": ("));
+
+      // async function test() {
+      //   const a = await PromiseLose();
+      //   console.log(a);
+      // }
+
+      // test();
+    </script>
+
+    <script id="zadatak6">
+
+    function AsyncPractice() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(Math.floor(Math.random() * 2) == 0 ? "head" : "tails");
+          }, 1000);
+        });
+      }
+
+      async function asyncCall() {
+        var asyncPromise = await AsyncPractice();
+        document.getElementById("zad6rezultat").value = asyncPromise;
+        console.log(asyncPromise);
+      }
+
+      // document.getElementById("z5b0").addEventListener("click", () => alert("yer dumb"));
+      document.getElementById("z6b0").addEventListener("click", () => asyncCall());
+    </script>
 
     <script>
-      var zadatak1 = document.getElementById('zadatak1').innerHTML;
-      document.getElementById('ta_zadatak1').value = zadatak1
+      var zadatak1 = document.getElementById("zadatak1").innerHTML;
+      document.getElementById("ta_zadatak1").value = zadatak1
         .trim()
-        .replace(/[\t\r]+/g, '');
-      var zadatak2 = document.getElementById('zadatak2').innerHTML;
-      document.getElementById('ta_zadatak2').value = zadatak2
+        .replace(/[\t\r]+/g, "");
+      var zadatak2 = document.getElementById("zadatak2").innerHTML;
+      document.getElementById("ta_zadatak2").value = zadatak2
         .trim()
-        .replace(/[\t\r]+/g, '');
-      var zadatak3 = document.getElementById('zadatak3').innerHTML;
-      document.getElementById('ta_zadatak3').value = zadatak3
+        .replace(/[\t\r]+/g, "");
+      var zadatak3 = document.getElementById("zadatak3").innerHTML;
+      document.getElementById("ta_zadatak3").value = zadatak3
         .trim()
-        .replace(/[\t\r]+/g, '');
-      var zadatak4 = document.getElementById('zadatak4').innerHTML;
-      document.getElementById('ta_zadatak4').value = zadatak4
+        .replace(/[\t\r]+/g, "");
+      var zadatak4 = document.getElementById("zadatak4").innerHTML;
+      document.getElementById("ta_zadatak4").value = zadatak4
         .trim()
-        .replace(/[\t\r]+/g, '');
-      var zadatak5 = document.getElementById('zadatak5').innerHTML;
-      document.getElementById('ta_zadatak5').value = zadatak5
+        .replace(/[\t\r]+/g, "");
+      var zadatak5 = document.getElementById("zadatak5").innerHTML;
+      document.getElementById("ta_zadatak5").value = zadatak5
         .trim()
-        .replace(/[\t\r]+/g, '');
-      var zadatak6 = document.getElementById('zadatak6').innerHTML;
-      document.getElementById('ta_zadatak6').value = zadatak6
+        .replace(/[\t\r]+/g, "");
+      var zadatak6 = document.getElementById("zadatak6").innerHTML;
+      document.getElementById("ta_zadatak6").value = zadatak6
         .trim()
-        .replace(/[\t\r]+/g, '');
+        .replace(/[\t\r]+/g, "");
     </script>
   </body>
 </html>
