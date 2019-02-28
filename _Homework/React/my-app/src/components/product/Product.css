@@ -1,0 +1,8 @@
+.imges{
+    display: block;
+    margin: auto;
+    float: absolute;
+    height: 25%;
+    width: 25%;
+    max-width: 450px;
+  }
