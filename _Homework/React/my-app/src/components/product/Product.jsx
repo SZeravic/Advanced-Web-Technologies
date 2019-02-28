@@ -10,11 +10,8 @@ export default class Product extends Component {
     return (
     <div className="post card" key={ this.props.product.id}>
         <div className="card-content">
-        <img
-            className="imges"
-            src={ball}
-            alt="Product"
-          />
+        {/* <img className="imges" src={ball} alt="Product"/> */}
+        <img className="imges" src="../../assets/images/glasses_5.png" alt="Product"/>
         <Link to={ "./" + this.props.product.id }>
         <span className="card-title">{ this.props.product.naziv }</span>
         </Link>

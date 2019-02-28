@@ -13,13 +13,13 @@ class App extends Component {
     super();
 
     this.state = {
-      products: [],
-      favorites: []
+      products: []
     };
   }
 
   componentDidMount() {
-    this.fetchProducts();    
+    this.fetchProducts();
+    // this.favorites();
   }
 
   fetchProducts(){
@@ -48,19 +48,16 @@ class App extends Component {
             <div className="content">
               <Switch>
                 <Route exact path="/" render={() => ( 
-                <Products 
-                        productList={ this.state.products }
-                /> )} 
-                />
+                <Products productList={ this.state.products } /> )}/>
+                <Route path="/:product_id" component={Product_details} />
                 {/* <Route path="/:product_id" render={() => ( 
                 <Product_details
                         productList={ this.state.products }
                 /> )} 
                 /> */}
-                <Route path="/:product_id" component={Product_details} />
               </Switch>
             </div>
-            <Aside />
+            <Aside favoriteProducts={ this.state.products } />
           </main>
 
           <Footer />
