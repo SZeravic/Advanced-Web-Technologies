@@ -8,7 +8,7 @@ const Navbar = () => {
         <a href="/" className="brand-logo"> Web Shop!</a>
         <ul>
           <li className="right"> <NavLink to="/"> Products </NavLink></li>
-          <li className="right"> <NavLink to="/Product"> Product </NavLink> </li>
+          <li className="right"> <NavLink to="/Product_details"> Product_details </NavLink> </li>
         </ul>
       </div>
     </nav>

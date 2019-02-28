@@ -28,7 +28,17 @@
 
   text-align: left;
 
-  background-color: rgba(213, 221, 216, 0.945);
+  background-color: rgba(160, 195, 235, 0.945);
+}
+
+.aside {
+  padding: 10px;
+  height: auto;
+  box-shadow: 3px 4px 7px 1px #484848;
+
+  text-align: center;
+
+  background-color: rgba(235, 205, 205, 0.945);
 }
 
 footer {

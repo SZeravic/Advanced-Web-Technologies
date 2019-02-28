@@ -15,8 +15,9 @@ class Product_details extends Component {
   render() {
     return (
       <div className="container">
-        <h4> {this.state.id} </h4>
-        <h1>Product list</h1>
+        <h2>Product list</h2>
+        <h4>This is specific Product placeholder</h4>
+        <h5>This product has an ID of: {this.state.id} </h5>
       </div>
     );
   }

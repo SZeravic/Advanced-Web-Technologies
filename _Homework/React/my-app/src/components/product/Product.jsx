@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import ball from "../../assets/images/glasses_5.png";
+
 
 // import { Link } from "react-router-dom";
 
@@ -13,7 +15,9 @@ export default class Product extends Component {
             src={ball}
             alt="Product"
           />
+        <Link to={ "./" + this.props.product.id }>
         <span className="card-title">{ this.props.product.naziv }</span>
+        </Link>
         <p> { this.props.product.opis } </p>
         
         </div>

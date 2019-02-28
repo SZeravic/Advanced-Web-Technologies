@@ -52,12 +52,12 @@ class App extends Component {
                         productList={ this.state.products }
                 /> )} 
                 />
-                <Route path="/product_details/:product_id" render={() => ( 
+                {/* <Route path="/:product_id" render={() => ( 
                 <Product_details
                         productList={ this.state.products }
                 /> )} 
-                />
-                {/* <Route path="/:product_id" component={Product} /> */}
+                /> */}
+                <Route path="/:product_id" component={Product_details} />
               </Switch>
             </div>
             <Aside />
